@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kitty Valentine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <div class="background" aria-hidden="true">
+    <div class="bg-gradient"></div>
+    <div class="bg-blobs">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="blob b3"></span>
+      <span class="blob b4"></span>
+      <span class="blob b5"></span>
+      <span class="blob b6"></span>
+      <span class="blob b7"></span>
+      <span class="blob b8"></span>
+    </div>
+    <div class="bg-grain"></div>
+  </div>
+
+  <main class="center">
+    <section class="card" id="card">
+      <div class="card-inner" id="cardInner">
+        <div class="video-section">
+          <div class="video-frame" id="videoFrame">
+            <video id="mainVideo" autoplay muted playsinline preload="auto" loop></video>
+            <button class="sound-toggle is-muted" id="soundToggle" aria-label="Toggle sound">
+              <svg class="icon icon-on" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"></path>
+                <path d="M16.5 8.5c1.2 1.1 1.2 5 0 6.1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"></path>
+              </svg>
+              <svg class="icon icon-off" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"></path>
+                <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <div class="content-section">
+          <p class="caption" id="caption" aria-live="polite"></p>
+          <h1 class="question">Will you be my Valentine?</h1>
+
+
+          <div class="button-row" id="buttonRow">
+            <div class="btn-wrap" id="yesWrap">
+              <button class="btn primary" id="yesBtn">
+                <span class="btn-label">Yes, Zen</span>
+              </button>
+            </div>
+            <button class="btn ghost" id="noBtn">
+              <span class="btn-label">No, I'm a Tygress</span>
+            </button>
+          </div>
+
+          <div class="progress" id="progress" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="finale" id="finale">
+        <div class="finale-card" id="finaleCard">
+          <h2>Picnic Date Quest</h2>
+          <p class="finale-text">Me ne wayɛ aka, but you make everything calm.</p>
+          <div class="finale-options" id="finaleOptions">
+            <button class="btn option"><span class="btn-label">Sunset picnic</span></button>
+            <button class="btn option"><span class="btn-label">Golden hour picnic</span></button>
+            <button class="btn option"><span class="btn-label">Main character picnic</span></button>
+          </div>
+        </div>
+        <div class="finale-result" id="finaleResult" aria-live="polite">
+          <div class="finale-image-wrap">
+            <img src="images/picnic.webp" alt="Picnic scene illustration" />
+          </div>
+          <h2>Happy Valentines Day Kitty</h2>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
